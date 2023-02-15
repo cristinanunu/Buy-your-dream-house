@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Buy_your_dream_house.data;
+using Buy_your_dream_house.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,18 +13,24 @@ namespace Buy_your_dream_house.Controllers
     [ApiController]
     public class HousesController : ControllerBase
     {
+        private readonly IHousesRepository _housesRepository;
+
+        public HousesController(IHousesRepository repository)
+        {
+            _housesRepository = repository;
+        }
         // GET: api/Houses
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<House> GetHouses()
         {
-            return new string[] { "value1", "value2" };
+            return _housesRepository.GetAllHouses();
         }
 
         // GET: api/Houses/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{id}")]
+        public House Get(int id)
         {
-            return "value";
+            return _housesRepository.GetOneHouse(id);
         }
 
         // POST: api/Houses

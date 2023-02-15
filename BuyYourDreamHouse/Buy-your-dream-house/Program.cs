@@ -1,6 +1,10 @@
+using Buy_your_dream_house.data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IJSONReader, JSONReader>();
+builder.Services.AddScoped<IHousesRepository, HousesRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

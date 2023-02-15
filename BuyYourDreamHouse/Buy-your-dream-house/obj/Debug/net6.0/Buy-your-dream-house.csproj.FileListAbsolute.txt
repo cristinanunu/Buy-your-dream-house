@@ -240,3 +240,4 @@
 /Users/salt-dev/my_projects/BuyYourDreamHouse/Buy-your-dream-house/obj/Debug/net6.0/Buy-your-dream-house.pdb
 /Users/salt-dev/my_projects/BuyYourDreamHouse/Buy-your-dream-house/obj/Debug/net6.0/Buy-your-dream-house.genruntimeconfig.cache
 /Users/salt-dev/my_projects/BuyYourDreamHouse/Buy-your-dream-house/obj/Debug/net6.0/ref/Buy-your-dream-house.dll
+/Users/salt-dev/my_projects/BuyYourDreamHouse/Buy-your-dream-house/bin/Debug/net6.0/data/listHouses.json
